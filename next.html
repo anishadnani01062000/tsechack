@@ -1,0 +1,22 @@
+<?php
+    $conn = new mysqli('localhost', 'root', '', 'final');
+    $country=$_POST['country'];
+    $colg_name =$_POST['colg_name'];
+    $gre_score =$_POST['gre_score'];
+    $toefl_score =$_POST['toefl_score'];
+    $gpa=$_POST['gpa'];
+    $asp_country=$_POST['asp_country'];
+    $sql="INSERT INTO connect (country,college_name,gre_score,toefl_score,gpa,asp_country) VALUES ('$country','$colg_name','$gre_score','$toefl_score','$gpa','$asp_country')";
+if($conn->query($sql) === TRUE)
+    echo'successfully inserted';
+ 
+    else
+    echo 'failed';
+
+?>
+<html>
+<body>
+<a href="test2.html">Enter</a>
+</body>
+
+</html>
